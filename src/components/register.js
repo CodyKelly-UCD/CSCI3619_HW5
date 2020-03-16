@@ -30,7 +30,7 @@ class Register extends Component {
 
     register(){
         const {dispatch} = this.props;
-        dispatch(submitRegister(this.state.details));
+        dispatch(submitRegister(this.state));
     }
 
     render(){
@@ -41,7 +41,7 @@ class Register extends Component {
                         Name
                     </Col>
                     <Col sm={10}>
-                        <FormControl onChange={this.updateDetails} value={this.state.details.name} type="text" placeholder="Name" />
+                        <FormControl onChange={this.updateDetails} value={this.state.name} type="text" placeholder="Name" />
                     </Col>
                 </FormGroup>
 
@@ -50,7 +50,7 @@ class Register extends Component {
                         Email
                     </Col>
                     <Col sm={10}>
-                        <FormControl onChange={this.updateDetails} value={this.state.details.username} type="text" placeholder="Username" />
+                        <FormControl onChange={this.updateDetails} value={this.state.username} type="text" placeholder="Username" />
                     </Col>
                 </FormGroup>
 
@@ -59,7 +59,7 @@ class Register extends Component {
                         Password
                     </Col>
                     <Col sm={10}>
-                        <FormControl onChange={this.updateDetails} value={this.state.details.password} type="password" placeholder="Password" />
+                        <FormControl onChange={this.updateDetails} value={this.state.password} type="password" placeholder="Password" />
                     </Col>
                 </FormGroup>
 
